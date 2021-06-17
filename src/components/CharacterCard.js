@@ -10,7 +10,7 @@ const CharacterCard = ( { id, image, name }) => {
       <Link to={`/characters/${id}`}>
         <div className='card'>
           <div className ='card-image'>
-            <figure className='image image-is-1by1'>
+            <figure className='image home-image image-is-1by1'>
               <div className='img_wrap'>
                 <img id='' src={image} alt={name} title={name}/>
                 <p className="hover">{name}</p>

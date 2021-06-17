@@ -24,13 +24,15 @@ const CharacterShow = () => {
   }, [id])
 
   return (
-    <div key={id}>
-      <p>{character.name}</p>
-      <img src={character.image} alt={character.name} />
-      <p>Status: {character.status}</p>
-      <p>Species: {character.species}</p>
-      <p>Gender: {character.gender}</p>
-      {/* <p>Planet: {character.origin.name}</p> */}
+    <div className='container is-three-fifths'>
+      <div key={id}>
+        <p>{character.name}</p>
+        <img src={character.image} alt={character.name} />
+        <p>Status: {character.status}</p>
+        <p>Species: {character.species}</p>
+        <p>Gender: {character.gender}</p>
+        {/* <p>Planet: {character.origin.name}</p> */}
+      </div>
     </div>
   )
 }

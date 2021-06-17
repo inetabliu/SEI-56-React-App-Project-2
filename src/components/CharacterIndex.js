@@ -44,50 +44,36 @@ const CharacterIndex = () => {
     }
   } 
   
-  // const handleLocationChange = async (event) => {
-  //   try {
-  //     const locationValue = `${event.target.value}`
-  //     const { data } = await axios.get(`https://rickandmortyapi.com/api/location/${locationValue}`)
-  //     console.log('my data', data.results)
-  //     setLocation(locations)
-    
-
-  //   } catch (err) {
-  //     console.log(err)
-  //   }
-  // }
-
-  // handleLocationChange()
-
-  
   return (
-    <section className='section'>
-      <form>
-        <select id="status"onChange={handleChange} className='select-dropdown'>
-          <option value='' className='drowpdown-item'>Status</option>
-          <option value='dead' className='dropdown-item'>Dead</option>
-          <option value='alive' className='dropdown-item'>Alive</option>
-        </select>
-        <select id="gender" onChange={handleChange} className='select-dropdown'>
-          <option value='' className='drowpdown-item'>Gender</option>
-          <option value='female' className='drowpdown-item'>Female</option>
-          <option value='male' className='dropdown-item'>Male</option>
-          <option value='genderless' className='dropdown-item'>Genderless</option>
-        </select>
-        <select id="species" onChange={handleChange} className='select-dropdown'>
-          <option value='' className='drowpdown-item'>Species</option>
-          <option value='human' className='drowpdown-item'>Human</option>
-          <option value='alien' className='dropdown-item'>Alien</option>
-          <option value='unknown' className='dropdown-item'>Unknown</option>
-        </select>
-        {/* <select onChange={handleLocationChange} id={locations.id}className='select-dropdown'>
-          {locations.map((item, id) => {
-            return <option key={id} value={item.id}>{locations.dimention}</option>
-          })}
-        </select> */}
-      </form>
-      <br></br>
-      <div className='container'>
+    <section className='section is-flex'>
+      <div className="container">
+        <h3>Find a character based on:</h3>
+        <div className="select is-small">
+          <select id="status"onChange={handleChange} className='select-dropdown'>
+            <option value='' className='drowpdown-item'>Status</option>
+            <option value='dead' className='dropdown-item'>Dead</option>
+            <option value='alive' className='dropdown-item'>Alive</option>
+          </select>
+        </div>
+        <div className="select is-small">
+          <select id="gender" onChange={handleChange} className='select-dropdown'>
+            <option value='' className='drowpdown-item'>Gender</option>
+            <option value='female' className='drowpdown-item'>Female</option>
+            <option value='male' className='dropdown-item'>Male</option>
+            <option value='genderless' className='dropdown-item'>Genderless</option>
+          </select>
+        </div>
+        <div className="select is-small">
+          <select id="species" onChange={handleChange} className='select-dropdown'>
+            <option value='' className='drowpdown-item'>Species</option>
+            <option value='human' className='drowpdown-item'>Human</option>
+            <option value='alien' className='dropdown-item'>Alien</option>
+            <option value='unknown' className='dropdown-item'>Unknown</option>
+          </select>
+        </div>
+      </div>
+      
+      <div className='container margin-top'>
         <div className='columns-style columns is-multiline'>
           {character.map(character => {
             return <CharacterCard key={character.id} {... character}/>

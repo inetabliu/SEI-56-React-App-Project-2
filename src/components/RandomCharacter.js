@@ -27,14 +27,32 @@ const RandomCharacter = () => {
   }, [] )
 
   return (
-    <div>
-      <p>{randomCharacter.name}</p>
-      <img src={randomCharacter.image} alt={randomCharacter.name} />
-      <p>Status: {randomCharacter.status}</p>
-      <p>Species: {randomCharacter.species}</p>
-      <p>Gender: {randomCharacter.gender}</p>
-      {/* <p>Planet: {character.origin.name}</p> */}
-    </div>
+    <section className='section random-section'>
+      <div className='container'>
+        <div className='positioning-content'>
+          <h2 className='title has-text-centered'>{randomCharacter.name}</h2>
+          <hr />
+          <div className='columns random-columns'>
+            <div className='column is-3'>
+              <figure>
+                <img src={randomCharacter.image} alt={randomCharacter.name} />
+              </figure>
+            </div>
+            <div className='column is-3'>
+              <h4 className='title is-4'>Status</h4>
+              <p>{randomCharacter.status}</p>
+              <hr />
+              <h4 className='title is-4'>Species</h4>
+              <p>{randomCharacter.species}</p>
+              <hr />
+              <h4 className='title is-4'>Gender</h4>
+              <p>{randomCharacter.gender}</p>
+              <hr />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   )
 
 }

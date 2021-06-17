@@ -6,12 +6,15 @@ import { Link } from 'react-router-dom'
 
 const CharacterCard = ( { id, image, name }) => {
   return (
-    <div className='column card-column is-one-sixth-desktop'>
+    <div className='column card-column is-one-fifth-desktop'>
       <Link to={`/characters/${id}`}>
         <div className='card'>
           <div className ='card-image'>
             <figure className='image image-is-1by1'>
-              <img src={image} alt={name} />
+              <div className='img_wrap'>
+                <img id='' src={image} alt={name} title={name}/>
+                <p className="hover">{name}</p>
+              </div>
             </figure>
           </div>
         </div>

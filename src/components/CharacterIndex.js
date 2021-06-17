@@ -13,6 +13,7 @@ const CharacterIndex = () => {
 
   const [character, setCharacter] = useState([])
   const [nextPage, setNextPage] = useState('')
+  const [location, setLocation] = useState([])
 
   useEffect(() => {
     const getData = async () => {
@@ -41,21 +42,38 @@ const CharacterIndex = () => {
       console.log(err)
     }
   } 
+  //  const handleLocationChange = async (event) => {
+  //   try {
+  //     const locationValue = `?${event.target.id}=${event.target.value}`
+  //     const { data } = await axios.get(`https://rickandmortyapi.com/api/location/`)
+
+  //   } catch (err)
+
+  //  }
 
   
   return (
     <section className='section'>
       <form>
         <select id="status"onChange={handleChange} className='select-dropdown'>
-          <option value='all' className='drowpdown-item'>All Species</option>
+          <option value='' className='drowpdown-item'>Status</option>
           <option  value='dead' className='dropdown-item'>Dead</option>
           <option  value='alive' className='dropdown-item'>Alive</option>
         </select>
         <select id="gender" onChange={handleChange} className='select-dropdown'>
-          <option value='All' className='drowpdown-item'>All</option>
+          <option value='' className='drowpdown-item'>Gender</option>
           <option value='female' className='drowpdown-item'>Female</option>
           <option  value='male' className='dropdown-item'>Male</option>
           <option  value='genderless' className='dropdown-item'>Genderless</option>
+        </select>
+        <select id="species" onChange={handleChange} className='select-dropdown'>
+          <option value='' className='drowpdown-item'>Species</option>
+          <option value='human' className='drowpdown-item'>Human</option>
+          <option  value='alien' className='dropdown-item'>Alien</option>
+          <option  value='unknown' className='dropdown-item'>Unknown</option>
+        </select>
+        <select id=""className='select-dropdown'>
+      
         </select>
       </form>
       <br></br>

@@ -7,7 +7,6 @@ import CharacterCard from './components/CharacterCard'
 import Home from './components/Home'
 import Navbar from './components/Navbar'
 import CharacterShow from './components/CharacterShow'
-import CharacterAlive from './components/CharacterAlive'
 
 
 

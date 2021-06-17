@@ -65,20 +65,20 @@ const CharacterIndex = () => {
       <form>
         <select id="status"onChange={handleChange} className='select-dropdown'>
           <option value='' className='drowpdown-item'>Status</option>
-          <option  value='dead' className='dropdown-item'>Dead</option>
-          <option  value='alive' className='dropdown-item'>Alive</option>
+          <option value='dead' className='dropdown-item'>Dead</option>
+          <option value='alive' className='dropdown-item'>Alive</option>
         </select>
         <select id="gender" onChange={handleChange} className='select-dropdown'>
           <option value='' className='drowpdown-item'>Gender</option>
           <option value='female' className='drowpdown-item'>Female</option>
-          <option  value='male' className='dropdown-item'>Male</option>
-          <option  value='genderless' className='dropdown-item'>Genderless</option>
+          <option value='male' className='dropdown-item'>Male</option>
+          <option value='genderless' className='dropdown-item'>Genderless</option>
         </select>
         <select id="species" onChange={handleChange} className='select-dropdown'>
           <option value='' className='drowpdown-item'>Species</option>
           <option value='human' className='drowpdown-item'>Human</option>
-          <option  value='alien' className='dropdown-item'>Alien</option>
-          <option  value='unknown' className='dropdown-item'>Unknown</option>
+          <option value='alien' className='dropdown-item'>Alien</option>
+          <option value='unknown' className='dropdown-item'>Unknown</option>
         </select>
         {/* <select onChange={handleLocationChange} id={locations.id}className='select-dropdown'>
           {locations.map((item, id) => {
@@ -93,7 +93,7 @@ const CharacterIndex = () => {
             return <CharacterCard key={character.id} {... character}/>
           })} 
         </div>
-        <button id="styled-button" className="button is-primary-is-focused" onClick={handlePageChange}>Show me more</button>
+        <button id="styled-button" className="button is-primary-is-loading is-fullwidth" onClick={handlePageChange}>Show me more</button>
       </div>
     </section>
   

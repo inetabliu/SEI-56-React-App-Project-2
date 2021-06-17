@@ -6,7 +6,7 @@
 }
 
 body, .bc-color {
-  height: 100vh;
+  height: 100%;
   background-color: #a9f3fd;
 }
 
@@ -19,15 +19,27 @@ nav.navbar:hover {
 }
 
 
-button {
-  color: brown;
+button.button {
+  background-color: #e89ac7;
+  font-family: 'Creepster', cursive;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  &:hover {
+    background-color: #97ce4c;
+    // transform: scale(1.5);
+  }
 }
 
-figure {
+div.card, figure {
   width: 180px;
 }
 
-h1 {
-  color: black;
+img {
+  border: 4px solid #f0e14a;
+  border-radius: 50%;
 }
+
+
+
 

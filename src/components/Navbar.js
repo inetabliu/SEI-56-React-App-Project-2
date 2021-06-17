@@ -11,14 +11,14 @@ const Navbar = () => {
     <nav className="navbar inital-navbar is-fixed-top">
       <div className="container">
         <div className="navbar-brand">
+          <div className="navbar-item">
+            <Link to="/characters">Go back to all characters</Link>
+          </div>
         </div>
         <div className='navbar-start'>
         </div>
         <div className="navbar-end">
           <div className="navbar-item">
-            <Link to="/characters">Go back to all characters</Link>
-          </div>
-          <div>
             <Link to="/randomcharacter">Generate random character</Link>
           </div>
         </div>

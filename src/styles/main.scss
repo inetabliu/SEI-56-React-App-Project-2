@@ -2,11 +2,16 @@
 
 * {
   font-family: 'Creepster', cursive;
+  color: #3273dc;
+}
+h2.title, h4.title {
+  color:#3273dc;
+  font-size: 3.5rem;
+  letter-spacing: 0.2rem;
 }
 
 p.hover {
   background-color: #f0e14a;
-
 }
 
 section, html, body, .bc-color {
@@ -46,22 +51,40 @@ div.card, div.home-image {
   width: 180px;
 }
 div.margin-top {
-  margin-top: 2.5%;
+  margin-top: 1.7%;
 }
 
-img {
+img.yellow-border {
   border: 4px solid #f0e14a;
   border-radius: 50%;
 }
 
 div.random-columns {
-  border: 1px solid red;
+  margin-top: 7%;
   justify-content: center;
+  align-items: center;
 }
 
-.random-section {
-  margin-top: 50px;
+div.random-container {
+  margin-top: 8%;
 }
+
+div.random-text {
+  border: 1px solid #e89ac7;
+  border-radius: 10px;
+  background-color: yellow;
+  padding: 10px;
+  margin-bottom: 5px;
+  margin-left: 10px;
+}
+
+div.random-text p {
+  margin-top: -20px;
+}
+
+
+
+
 
 
 

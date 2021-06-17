@@ -1,49 +1,37 @@
 /* eslint-disable no-unused-vars */
-import { useEffect, useState } from 'react'
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-
-
-
+import { useParams } from 'react-router-dom'
 
 const CharacterShow = () => {
-
   const [character, setCharacter] = useState([])
-  const [nextPage, setNextPage] = useState('')
+  // const [hasError, setHasError] = useState(false)
+  // const [nextPage, setNextPage] = useState('')
+  const { id } = useParams()
+  console.log('my id',id)
+
 
   useEffect(() => {
     const getData = async () => {
-      const { data } = await axios.get('https://rickandmortyapi.com/api/character')
-      setCharacter(data.results)
-      setNextPage(data.info.next)
+      try {
+        const { data } = await axios.get(`https://rickandmortyapi.com/api/character/${id}`)
+        setCharacter(data)
+      } catch (err) {
+        console.log(err)
+      }
     }
     getData()
-  }, [])
+  }, [id])
 
-  const handlePageChange = async () => {
-    const { data } = await axios.get(nextPage)
-    const newCharacters = character.concat(data.results)
-    console.log('this is my new character array', newCharacters)
-    setCharacter(newCharacters)
-    setNextPage(data.info.next)
-  }
   return (
-    <>
-      {character.map((item, index) => {
-        return <div key={index}>
-          <p>Name: {item.name}</p>
-          <img src={item.image} alt={item.name} />
-          <p>Status: {item.status}</p>
-          <p>Species: {item.species}</p>
-          <p>Gender: {item.gender}</p>
-          <p>Planet: {item.origin.name}</p>
-        </div>
-      }) 
-      }
-      <button onClick={handlePageChange}>Show me more</button>
-    </>
-  
+    <div key={id}>
+      <p>{character.name}</p>
+      <img src={character.image} alt={character.name} />
+      <p>Status: {character.status}</p>
+      <p>Species: {character.species}</p>
+      <p>Gender: {character.gender}</p>
+      {/* <p>Planet: {origin.name}</p> */}
+    </div>
   )
 }
 

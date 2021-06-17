@@ -1,17 +1,33 @@
-// * {
-//   background-color: #232137;
-// }
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
 
-// .inital-navbar {
-//   background-color: black;
-// }
-
-
-#image {
-  background-color: black;
+* {
+  font-family: 'Creepster', cursive;
+  
 }
 
-.inital-image {
-  width: 50%;
-  height: 50%;
+body, .bc-color {
+  height: 100vh;
+  background-color: #a9f3fd;
 }
+
+nav.navbar {
+  background-color: #97ce4c;
+}
+
+nav.navbar:hover {
+  background-color: #e89ac7;
+}
+
+
+button {
+  color: brown;
+}
+
+figure {
+  width: 180px;
+}
+
+h1 {
+  color: black;
+}
+

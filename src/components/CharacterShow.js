@@ -30,7 +30,7 @@ const CharacterShow = () => {
       <p>Status: {character.status}</p>
       <p>Species: {character.species}</p>
       <p>Gender: {character.gender}</p>
-      {/* <p>Planet: {origin.name}</p> */}
+      {/* <p>Planet: {character.origin.name}</p> */}
     </div>
   )
 }

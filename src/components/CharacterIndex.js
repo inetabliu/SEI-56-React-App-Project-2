@@ -13,7 +13,8 @@ const CharacterIndex = () => {
 
   const [character, setCharacter] = useState([])
   const [nextPage, setNextPage] = useState('')
-  const [location, setLocation] = useState([])
+  // const [locations, setLocation] = useState([])
+
 
   useEffect(() => {
     const getData = async () => {
@@ -42,14 +43,21 @@ const CharacterIndex = () => {
       console.log(err)
     }
   } 
-  //  const handleLocationChange = async (event) => {
+  
+  // const handleLocationChange = async (event) => {
   //   try {
-  //     const locationValue = `?${event.target.id}=${event.target.value}`
-  //     const { data } = await axios.get(`https://rickandmortyapi.com/api/location/`)
+  //     const locationValue = `${event.target.value}`
+  //     const { data } = await axios.get(`https://rickandmortyapi.com/api/location/${locationValue}`)
+  //     console.log('my data', data.results)
+  //     setLocation(locations)
+    
 
-  //   } catch (err)
+  //   } catch (err) {
+  //     console.log(err)
+  //   }
+  // }
 
-  //  }
+  // handleLocationChange()
 
   
   return (
@@ -72,9 +80,11 @@ const CharacterIndex = () => {
           <option  value='alien' className='dropdown-item'>Alien</option>
           <option  value='unknown' className='dropdown-item'>Unknown</option>
         </select>
-        <select id=""className='select-dropdown'>
-      
-        </select>
+        {/* <select onChange={handleLocationChange} id={locations.id}className='select-dropdown'>
+          {locations.map((item, id) => {
+            return <option key={id} value={item.id}>{locations.dimention}</option>
+          })}
+        </select> */}
       </form>
       <br></br>
       <div className='container'>
@@ -83,7 +93,7 @@ const CharacterIndex = () => {
             return <CharacterCard key={character.id} {... character}/>
           })} 
         </div>
-        <button onClick={handlePageChange}>Show me more</button>
+        <button id="styled-button" className="button is-primary-is-focused" onClick={handlePageChange}>Show me more</button>
       </div>
     </section>
   

@@ -23,7 +23,6 @@ const RandomCharacter = () => {
       }
     }
     getData()
-    
   }, [] )
 
   return (

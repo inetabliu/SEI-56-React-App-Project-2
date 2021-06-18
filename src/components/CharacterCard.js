@@ -12,8 +12,8 @@ const CharacterCard = ( { id, image, name }) => {
           <div className ='card-image'>
             <figure className='image home-image image-is-1by1'>
               <div className='img_wrap'>
+                <p className="hover p-hover">{name}</p>
                 <img className='yellow-border' src={image} alt={name} title={name}/>
-                <p className="hover">{name}</p>
               </div>
             </figure>
           </div>

@@ -4,6 +4,11 @@
   font-family: 'Creepster', cursive;
   color: #3273dc;
 }
+
+// body {
+//   cursor: url('https://i.ibb.co/GpWhLH1/rsz-picklepng.png'), auto;
+// }
+
 h2.title, h4.title {
   color:#3273dc;
   font-size: 3.5rem;
@@ -82,7 +87,15 @@ div.random-text p {
   margin-top: -20px;
 }
 
+p.p-hover {
+  padding-top: 5px;
+  padding-left: 5px;
+}
 
+div.navbar-item a {
+  letter-spacing: 1px;
+  font-size: 20px;
+}
 
 
 

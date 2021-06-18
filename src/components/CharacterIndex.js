@@ -13,8 +13,7 @@ const CharacterIndex = () => {
 
   const [character, setCharacter] = useState([])
   const [nextPage, setNextPage] = useState('')
-  // const [values, setValues] = useState([])
-  // const [locations, setLocation] = useState([])
+ 
 
 
   useEffect(() => {
@@ -31,36 +30,21 @@ const CharacterIndex = () => {
     const newCharacters = character.concat(data.results)
     setCharacter(newCharacters)
     setNextPage(data.info.next)
-    setCharacter(character)
   }
 
   const handleChange = async (event) => {
     try {
-      // const path = [ ... values, `${event.target.id}=${event.target.value}`]
-      // const pathTwo = path.join('&')
-      // console.log('my path >>', path)
       const value = `/?${event.target.id}=${event.target.value}`
       const { data } = await axios.get(`https://rickandmortyapi.com/api/character/${value}`)
       setNextPage(data.info.next)
       setCharacter(data.results)
-      // setValues(path)
       
     } catch (err) {
       console.log(err)
     }
   } 
-
-  // console.log(values)
-  // console.log('i picked >>', character)
-
-  // https://rickandmortyapi.com/api/character/?page=2&name=rick&status=alive&gender=male
-  // const handleSubmit = (event) => {
-  //   event.preventDefault()
-  //   const filteredCharacterArray = character
-  //   console.log('character', filteredCharacterArray)
-  //   setCharacter(filteredCharacterArray)
-  //   console.log('make my change')
-  // }
+ 
+  
   
   return (
     <section className='section is-flex'>

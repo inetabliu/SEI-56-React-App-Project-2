@@ -1,22 +1,27 @@
 /* eslint-disable no-unused-vars */
 import axios from 'axios'
-import { data } from 'browserslist'
 import React from 'react'
 import { Link } from 'react-router-dom'
 
 const Navbar = () => {
 
-  const handleChange = () => {
-    location.reload()
+
+  //Reloads the random character page
+  const handleClickRandom = () => {
+    location.assign('/randomcharacter')
   }
 
+  //Go back to the character page
+  const handleClickCharacters = () => {
+    location.assign('/characters')
+  }
   
   return (
     <nav className="navbar inital-navbar is-fixed-top">
       <div className="container">
         <div className="navbar-brand">
           <div className="navbar-item">
-            <Link to="/characters">Go back to all characters</Link>
+            <Link to="/characters" onClick={handleClickCharacters}>Go back to all characters</Link>
           </div>
         </div>
         <div className='navbar-start'>
@@ -26,7 +31,7 @@ const Navbar = () => {
         </div>
         <div className="navbar-end">
           <div className="navbar-item">
-            <Link to="/randomcharacter" onClick={handleChange}>Generate random character</Link>
+            <Link to="/randomcharacter" onClick={handleClickRandom}>Generate random character</Link>
           </div>
         </div>
       </div>

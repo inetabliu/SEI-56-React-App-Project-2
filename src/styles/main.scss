@@ -1,42 +1,46 @@
 @import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+$color-yellow: #f0e14a;
+$color-blue: #3273dc;
+$color-ligh-blue: #a9f3fd;
+$color-pink: #e89ac7;
+
 
 * {
   font-family: 'Creepster', cursive;
-  color: #3273dc;
-}
-
-// body {
-//   cursor: url('https://i.ibb.co/GpWhLH1/rsz-picklepng.png'), auto;
-// }
-
-h2.title, h4.title {
-  color:#3273dc;
-  font-size: 3.5rem;
-  letter-spacing: 0.2rem;
-}
-
-p.hover {
-  background-color: #f0e14a;
+  color: $color-blue;
+  h2.title, h4.title, h1.title {
+    color:$color-blue;
+    font-size: 3.5rem;
+    letter-spacing: 0.2rem;
+  }
+  p.color {
+    padding-top: 5px;
+    background-color: $color-yellow;
+  }
+  
 }
 
 section, html, body, .bc-color {
   height: 100%;
-  background-color: #a9f3fd;
-}
-
-nav.navbar {
-  background-color: #97ce4c;
-  &:hover {
-    background-color: #e89ac7;
+  background-color: $color-ligh-blue;
+  section.section {
+    justify-content: flex-end;
+    div.container {
+      text-align: center;
+      // margin-top: 4%;
+    }
+  }
+  nav.navbar {
+    background-color: #97ce4c;
+    &:hover {
+      background-color: $color-pink;
+    }
   }
 }
 
-section.section {
-  justify-content: flex-end;
-}
-
 button.button {
-  background-color: #e89ac7;
+  background-color: $color-pink;
+  color: $color-blue;
   font-family: 'Creepster', cursive;
   position: fixed;
   right: 0;
@@ -49,7 +53,7 @@ button.button {
 
 .select select:not([multiple])  {
   margin-top: 5%;
-  background-color: #e89ac7;
+  background-color: $color-pink;
 }
 
 div.card, div.home-image {
@@ -60,12 +64,11 @@ div.margin-top {
 }
 
 img.yellow-border {
-  border: 4px solid #f0e14a;
+  border: 4px solid $color-yellow;
   border-radius: 50%;
 }
 
 div.random-columns {
-  margin-top: 7%;
   justify-content: center;
   align-items: center;
 }
@@ -75,9 +78,9 @@ div.random-container {
 }
 
 div.random-text {
-  border: 1px solid #e89ac7;
+  border: 1px solid $color-pink;
   border-radius: 10px;
-  background-color: yellow;
+  background-color: $color-yellow;
   padding: 10px;
   margin-bottom: 5px;
   margin-left: 10px;
@@ -87,18 +90,35 @@ div.random-text p {
   margin-top: -20px;
 }
 
-p.p-hover {
-  padding-top: 5px;
-  padding-left: 5px;
-}
-
 div.navbar-item a {
   letter-spacing: 1px;
   font-size: 20px;
 }
 
+h1.title {
+  margin-top: 10px;
+  margin-bottom: 60px;
+}
 
+div.character-index-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.character-index-paragraph {
+  padding-top: 15px;
+}
+
+select.select-width {
+  width: 160px;
+}
+
+form h3 {
+  font-size: 20px;
+  letter-spacing: 0.1rem;
+  margin-bottom: 10px;
+}
 
 
 

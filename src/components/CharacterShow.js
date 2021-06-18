@@ -1,16 +1,19 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import { useParams, Link } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 
+//COMPONENT TO SHOW INDIVIDUAL CHARACTER 
 const CharacterShow = () => {
+
+  //States CHARACTER, EPISODE DISPLAY, LOCATION DISPLAY, ERROR HANDLING
   const [character, setCharacter] = useState([])
   const [location, setLocation] = useState([])
   const [episode, setEpisodes] = useState([])
   const { id } = useParams()
   const [hasError, setHasError] = useState(false)
 
-
+  //GET API DATA FOR INDIVIDUAL CHARACTER BY ID
   useEffect(() => {
     const getData = async () => {
       try {
@@ -24,6 +27,8 @@ const CharacterShow = () => {
     }
     getData()
   }, [id])
+
+
 
   return (
     <section className='section'>
@@ -65,7 +70,7 @@ const CharacterShow = () => {
           </div>
           :
           <h2 className="title has-text-centered">
-            {hasError ? 'Something has gone wrong' : <img src='https://thumbs.gfycat.com/BareJoyousAsp.webp' alt='Rock And Morty'/>}
+            {hasError ? 'Something has gone wrong' : <img src='https://thumbs.gfycat.com/BareJoyousAsp.webp' alt='Rick And Morty'/>}
           </h2>
         }
       </div>

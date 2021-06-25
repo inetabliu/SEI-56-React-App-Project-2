@@ -31,7 +31,7 @@ const CharacterShow = () => {
 
 
   return (
-    <section className='section'>
+    <section className='section is-mobile'>
       <div className='container random-container'>
         {character ,location, episode ?
           <div>

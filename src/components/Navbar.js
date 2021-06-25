@@ -19,14 +19,14 @@ const Navbar = () => {
   return (
     <nav className="navbar inital-navbar is-fixed-top">
       <div className="container">
-        <div className="navbar-brand">
-          <div className="navbar-item">
-            <Link to="/characters" onClick={handleClickCharacters}>Go back to all characters</Link>
-          </div>
-        </div>
         <div className='navbar-start'>
           <div className="navbar-item">
             <Link to="/">Take Me Home</Link>
+          </div>
+        </div>
+        <div className="navbar-brand">
+          <div className="navbar-item">
+            <Link to="/characters" onClick={handleClickCharacters}>Go back to all characters</Link>
           </div>
         </div>
         <div className="navbar-end">

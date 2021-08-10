@@ -1,23 +1,34 @@
+## Readme currently in progress... ![2%](https://progress-bar.dev/2)
+
+# General Assembly SEI-Project-2
+## Rick & Morty Character App - 48hours Hackaton 
+![Screenshot 2021-08-05 at 16 20 50](https://user-images.githubusercontent.com/81913593/128914877-376d2d65-207f-4746-a00f-ba81c0bd2b42.png)
+
+## Brief
+* **Consume a public API**
+* **Have several components**
+* **The app can have a router** - with several "pages", this is up to you and if it makes sense for your project.
+* **Include wireframes** - that you designed before building the app.
+* **Be deployed online** and accessible to the public (hosted on your public github, not GA github!)
+
+
+[RICK & MORTY API DOCUMENTATION](https://rickandmortyapi.com/)
+
+# Technologies used
++ React.js
++ Axios
++ Bulma CSS Framework
++ SASS
++ CSS3
++ React Router DOM
++ VSCode Liveshare
++ Insomnia
++ Yarn
++ Version control tools (Git/Github)
++ Netlify (deployment)
 
 
 
 
-## Using NPM
-
-`yarn start` or `yarn dev`  to run the development server
-
-`yarn build` to create a build directory
-
-## Using Yarn
-
-`yarn start` or `yarn dev`  to run the development server
-
-`yarn build` to create a build directory
-
-### ⚠️
-
-To prevent the `failed-to-compile` issue for linter errors like `no-unsed-vars`, rename the `.env.example` to `.env` and restart your development server. Note this will only change the behaviour of certain linter errors to now be warnings, and is added just to allow your code to compile in development. These errors should still be fixed and other errors will still result in the code being unable to compile
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 Check our deployed version https://rickandmorty-ga.netlify.app/

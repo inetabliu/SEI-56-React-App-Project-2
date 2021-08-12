@@ -11,6 +11,9 @@
 * **Include wireframes** - that you designed before building the app.
 * **Be deployed online** and accessible to the public (hosted on your public github, not GA github!)
 
+## Overview 
+Built a React app within 48 hours as part of a pair coded Reacathon we have decided to build a fun and cheerful Rick & Morty application that you would be able to view all 641 characters with their different properties and ability to generate a random character and ability to filter characters based on different features (Alive or Dead, Human or Alien, Male/Female/Unknown)
+
 
 [RICK & MORTY API DOCUMENTATION](https://rickandmortyapi.com/)
 

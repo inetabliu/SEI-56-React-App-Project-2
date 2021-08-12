@@ -19,6 +19,13 @@ $color-pink: #e89ac7;
   }
   
 }
+div.container {
+  display: flex;
+  justify-content: space-evenly;
+ h1.larger {
+   font-size: xxx-large;
+ }
+}
 
 section, html, body, .bc-color {
   height: 100%;
@@ -127,5 +134,8 @@ form h3 {
 @media only screen and (max-width: 600px) {
   h1.title {
     display: none;
+  }
+  h1.larger {
+   display: none;
   }
 }

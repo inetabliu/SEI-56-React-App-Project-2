@@ -1,10 +1,10 @@
 /* eslint-disable no-unused-vars */
 import axios from 'axios'
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 const Navbar = () => {
-
+  const [navState, setNavState] = useState(false)
 
   //Reloads the random character page
   const handleClickRandom = () => {

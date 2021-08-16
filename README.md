@@ -1,4 +1,4 @@
-## Readme currently in progress... ![2%](https://progress-bar.dev/2)
+## Readme currently in progress... ![60%](https://progress-bar.dev/60)
 
 # General Assembly SEI-Project-2
 ## Rick & Morty Character App - 48hours pair coded Hackaton

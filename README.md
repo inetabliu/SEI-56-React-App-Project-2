@@ -25,8 +25,6 @@ API we used can be found here -> [RICK & MORTY API DOCUMENTATION](https://rickan
 + Start server with ``yarn start``
 
 
-
-
 # Technologies used
 + React.js
 + Axios
@@ -39,6 +37,28 @@ API we used can be found here -> [RICK & MORTY API DOCUMENTATION](https://rickan
 + Yarn
 + Version control tools (Git/Github)
 + Netlify (deployment)
+
+
+## Process 
+
+We had only 48 hours to produce our MVP so had to pick a Public API that worked in our favour. We found a great Rick and Morty cartoon API that consisted of great documentation and most importantly included some imagery, as it was something we were after.
+We decided to use VSCode Liveshare for this project so we can collaboratively work on the same code base together. We wanted to keep our application simple with just a few "pages" so we could focus on it looking well polished and the features are working as intended.
+
+
+Hangling pagination and loading the next 20 characters everytime ``show more`` button is pressed.
+```javascript
+const handlePageChange = async () => {
+    try {
+      const { data } = await axios.get(nextPage)
+      const newCharacters = character.concat(data.results)
+      setCharacter(newCharacters)
+      setNextPage(data.info.next)
+    } catch (err) {
+      console.log(err)
+    }
+  }
+
+```
 
 ## Challenges
 
@@ -53,10 +73,12 @@ API we used can be found here -> [RICK & MORTY API DOCUMENTATION](https://rickan
 + Using Bulma CSS framework for the first time in a project has been exremely rewaring experiece, seeing how easily you can add responsiveness and styling just with a few classes.
 
 
-# Bugs 
+## Bugs 
 + Random character generator renders the character twice which causes it to change from one character to another. It doesn't occur all the time but it has definitely been an issue with how me managed the state of our randomly generater character.
 + Filter characters goes chain the filtering criteria propertly, we have spent a fair amount of time in getting the functionality working, but couldn't hack it in the end. 
 + We never got to making sure the navbar doesn't apear on the home page due to timing of the project.
 
-
+## Key learnings 
++ First React App. First time familiarising myself with React Hooks and state management in React App. Definitely looking forward using React more in my different projects.
++ Using Axios. Solidfying my understanding of HTTP request and using axios in this project definitely been a major learning experience. Understanding how asyncronous functions work and how promises are handled.
 

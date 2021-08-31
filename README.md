@@ -1,28 +1,30 @@
-## Readme currently in progress... ![80%](https://progress-bar.dev/80)
+## Readme currently in progress... ![90%](https://progress-bar.dev/90)
 
 # General Assembly SEI-Project-2
 ## Rick & Morty Character App - 48hours pair coded Hackathon
 ![ezgif com-gif-maker](https://user-images.githubusercontent.com/81913593/129573394-be858942-b359-4c8c-8b62-26bd6e0d5778.gif)
 
-Check our deployed version https://rickandmorty-ga.netlify.app/
-
-## Brief
-* **Consume a public API**
-* **Have several components**
-* **The app can have a router** - with several "pages", this is up to you and if it makes sense for your project.
-* **Include wireframes** - that you designed before building the app.
-* **Be deployed online** and accessible to the public (hosted on your public github, not GA github!)
-
 ## Overview 
 Built a React app within 48 hours as part of a pair coded Reacathon we have decided to build a fun and cheerful Rick & Morty application that you would be able to view all 641 characters with their different properties and ability to generate a random character and ability to filter characters based on different features (Alive or Dead, Human or Alien, Male/Female/Unknown)
 API we used can be found here -> [RICK & MORTY API DOCUMENTATION](https://rickandmortyapi.com/)
 
+Check our deployed version https://rickandmorty-ga.netlify.app/
 
+### Team
++ [Ineta Bliudziute](https://github.com/inetabliu)
++ [Vania Tominic](https://github.com/VaniaTominc)
+
+## Brief
+* **Consume a public API.**
+* **Have several components.**
+* **The app can have a router** - with several "pages", this is up to you and if it makes sense for your project.
+* **Include wireframes** - that you designed before building the app.
+* **Be deployed online** and accessible to the public.
 
 ## Installation
-+ Clone or download the repo
-+ Open it in editor of your choice and run ``yarn`` command in your terminal to install all dependencies
-+ Start server with ``yarn start``
++ Clone or download the repo.
++ Open it in editor of your choice and run ``yarn`` command in your terminal to install all dependencies.
++ Start server with ``yarn start``.
 
 
 # Technologies used
@@ -35,16 +37,15 @@ API we used can be found here -> [RICK & MORTY API DOCUMENTATION](https://rickan
 + VSCode Liveshare
 + Insomnia
 + Yarn
-+ Version control tools (Git/Github)
++ Version control tools (Git/GitHub)
 + Netlify (deployment)
 
 
-## Process 
-
+## Approach 
 We had only 48 hours to produce our MVP so had to pick a Public API that worked in our favour. We found a great Rick and Morty cartoon API that consisted of great documentation and most importantly included some imagery, as it was something we were after.
 We decided to use VSCode Liveshare for this project so we can collaboratively work on the same code base together. We wanted to keep our application simple with just a few "pages" so we could focus on it looking well polished and the features are working as intended.
 
-We moved to the stage in testing our API and making a ``get`` request to display data about our characters. The second we know we can access certain endpoints on the API.
+The next stage was testing our API and making a ``get`` request to display data about our characters, once we knew we could access certain endpoints on the API.
 
 ```javascript 
 useEffect(() => {
@@ -81,7 +82,7 @@ const handlePageChange = async () => {
 ## Challenges
 
 + Filtering characters by 3 different criteria has proven to be difficult, as we were not fully comfortable with state management yet which led us to an unfinished filtering function in our project.
-+ First time dealing with paginated API. Was a great challenge to overcome and adapt to the layout of our API at hand as we were able to only display 20 characters at a time, so we had to find a solution to our pagination problem
++ First time dealing with paginated API. Was a great challenge to overcome and adapt to the layout of our API at hand as we were able to only display 20 characters at a time, so we had to find a solution to our pagination problem.
 + Clear planning and user stories, something that we didn't complete fully due to the short timeframe for the project. It has definitely made it harder to progress through the development process of our project without a clear planning structure of it.
 
 ## Wins
